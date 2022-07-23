@@ -10,7 +10,7 @@ void main() {
     expect(15.remapAndClampInt(0, 10, 0, 100), 100);
     expect(15.remapAndClampInt(0, 10, 100, 0), 0);
   });
-  
+
   test('remapInt loop test', () async {
     for (int i = 0; i <= 100; i += 1) {
       for (int j = 1; j <= 100; j += 1) {
@@ -20,26 +20,26 @@ void main() {
       }
     }
   });
-  
+
   test('remapInt fuzzy test', () async {
     const epsilon = 1;
     final random = Random(197376941);
-    
+
     for (int i = 0; i < 100000000; i += 1) {
       final x = random.nextInt(4096);
       final fromLow = random.nextInt(4096);
       final fromHigh = random.nextInt(4096);
       final toLow = random.nextInt(4096);
       final toHigh = random.nextInt(4096);
-      
+
       if (fromLow == fromHigh) continue;
       if (toLow == toHigh) continue;
-      
+
       final remapped = x.remapInt(fromLow, fromHigh, toLow, toHigh);
-      
+
       final ratioBefore = (x - fromLow) / (fromHigh - fromLow);
       final ratioAfter = (remapped - toLow) / (toHigh - toLow);
-      
+
       expect(ratioAfter, closeTo(ratioBefore, epsilon));
     }
   });
