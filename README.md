@@ -60,7 +60,7 @@ works.
 
 **Integer-only methods:**
 
-Both the `remap` and the `remapAndClamp` offer integer only versions of themselves (named `remapInt` nad `remapAndClampInt` respectively). These work the same as their `num` counterparts, however their return value is guaranteed to be an integer.
+Both the `remap` and the `remapAndClamp` offer integer-only versions of themselves (named `remapInt` nad `remapAndClampInt` respectively). These work the same as their `num` counterparts, however their return value is guaranteed to be an integer.
 
 <br>
 
