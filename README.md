@@ -32,7 +32,7 @@ for example
 final reversedX = x.remap(1, 50, 50, 1);
 ```
 
-The method also handles negtative numbers well, so that this example
+The method also handles negative numbers well, so that this example
 ```dart
 final y = x.remap(1, 50, 50, -100);
 ```
