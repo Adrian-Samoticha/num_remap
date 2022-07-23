@@ -1,5 +1,5 @@
 name: num_remap
-description: An implementation for the “Arduino map” function in Dart.
+description: An implementation for the “Arduino map” function in Dart, which allows numbers to be remapped from one range to another.
 version: 1.0.0
 repository: https://github.com/Adrian-Samoticha/num_remap
 issue_tracker: https://github.com/Adrian-Samoticha/num_remap/issues

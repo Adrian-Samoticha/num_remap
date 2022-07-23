@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages). 
 -->
 
-An implementation for the [“Arduino map”](https://www.arduino.cc/reference/en/language/functions/math/map/) function in Dart.
+An implementation for the [“Arduino map”](https://www.arduino.cc/reference/en/language/functions/math/map/) function in Dart, which allows numbers to be remapped from one range to another.
 
 ## Features
 
