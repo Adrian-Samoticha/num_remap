@@ -17,17 +17,17 @@ An implementation for the [“Arduino map”](https://www.arduino.cc/reference/e
 
 **`remap` method:**
 
-Re-maps a number from one range to another. That is, a value of `fromLow` would
-get mapped to `toLow`, a value of `fromHigh` to `toHigh`, values in-between to values
-in-between, etc.
+Remaps a number from one range to another. That is, a value of `fromLow` would
+get mapped to `toLow`, a value of `fromHigh` to `toHigh`, and values in-between to values
+in-between.
 
-Does not constrain values to within the range, because out-of-range values are
+It does not constrain the values to the provided range, because out-of-range values are
 sometimes intended and useful. Use the `remapAndClamp` method if you wish for
 the values to be constrained.
 
 Note that the “lower bounds” of either range may be larger or smaller than the
 “upper bounds” so the `remap()` method may be used to reverse a range of numbers,
-for example
+for example:
 ```dart
 final reversedX = x.remap(1, 50, 50, 1);
 ```
@@ -36,13 +36,13 @@ The method also handles negative numbers well, so that this example
 ```dart
 final y = x.remap(1, 50, 50, -100);
 ```
-is also valid and works well.
+is also valid.
 
 <br>
 
 **`remapAndClamp` method:**
 
-Same as `remap`, however the result is being constrained to the range
+Same as `remap`, however, the result is being constrained to the range
 `toLow`-`toHigh`.
 
 For instance, the following code returns `1`:
@@ -60,7 +60,7 @@ works.
 
 **Integer-only methods:**
 
-Both the `remap` and the `remapAndClamp` offer integer-only versions of themselves (named `remapInt` nad `remapAndClampInt` respectively). These work the same as their `num` counterparts, however their return value is guaranteed to be an integer.
+Both the `remap` and the `remapAndClamp` offer integer-only versions of themselves (named `remapInt` and `remapAndClampInt` respectively). These work the same as their `num` counterparts, however, their returned value is guaranteed to be an integer.
 
 <br>
 
